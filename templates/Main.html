@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main HTML</title>
+    <link href="{% static "static/css/foundation.css" %}" rel="stylesheet" type="text/css" >
+</head>
+<body>
+<h1><a href="/">Мой блог</a> </h1>
+<div class="row">
+{% block article %}{% endblock %}
+</div>
+</body>
+</html>

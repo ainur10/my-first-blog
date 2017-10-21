@@ -1,0 +1,13 @@
+{% extends 'Main.html'%}
+{% load staticfiles %}
+{% block article %}
+<div class="large-offset-1">
+{% for article in articles %}
+    <h5>Дата публикации: {{ article.article_date }}</h5>
+    <h3><a href="/articles/get/{{ article.id }}"> {{ article.article_title }}</a></h3>
+    <h5>{{ article.article_text }}</h5>
+    <h5><img src="{% static "Like.jpg" %}" width="25px" height="25px" >{{ article.article_likes }}</h5>
+
+{% endfor %}
+</div>
+{% endblock %}
